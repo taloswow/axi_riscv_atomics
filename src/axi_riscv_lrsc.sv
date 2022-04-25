@@ -463,6 +463,7 @@ module axi_riscv_lrsc #(
     ) i_non_excl_acc_arb (
         .clk_i          (clk_i),
         .rst_ni         (rst_ni),
+	.clr_i          (1'b0),
         .inp_data_i     ({rd_clr_addr,  wr_clr_addr}),
         .inp_valid_i    ({rd_clr_req,   wr_clr_req}),
         .inp_ready_o    ({rd_clr_gnt,   wr_clr_gnt}),
